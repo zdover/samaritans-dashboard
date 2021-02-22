@@ -180,8 +180,8 @@
                       throw new Error(response.statusText);
                     const json = await response.json();
                     // only show events in the next 7 days
-                    // this.events = json['events']
-                    this.events = json['events'].filter(event => moment(event.date).isBefore(moment().add(7, 'd')))
+                    this.events = json['events']
+                    // this.events = json['events'].filter(event => moment(event.date).isBefore(moment().add(7, 'd')))
                     this.eventsError = null;
                   } catch (err) {
                     console.log(err);
